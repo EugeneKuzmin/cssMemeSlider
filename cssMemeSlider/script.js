@@ -1,3 +1,6 @@
+const descriptions = ['one','two','three','four']
+const textDescription = document.querySelector('[data-meme-text]')
+
 const carousel = document.getElementById('carousel')
 
 const picClass = document.querySelectorAll('.card__img')[0]
@@ -19,6 +22,7 @@ dots.forEach((dot,index)=>{
         dots[activeIndex].classList.remove('active')
         dot.classList.add('active')
         activeIndex = index
+        textDescription.textContent = getDescription(index)
     }
     )
 })
