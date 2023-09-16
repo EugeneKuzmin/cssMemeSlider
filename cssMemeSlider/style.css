@@ -1,0 +1,51 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+p {
+    font-weight: 400;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+    background-color: hsl(211, 100%, 12%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    min-width: 85vw;
+}
+
+.carousel-slider{
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel-slider img{
+    height: 501px;
+    object-fit: cover;
+    width: 100% ;
+}
