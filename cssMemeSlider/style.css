@@ -34,6 +34,10 @@ body {
     min-height: 100vh;
 }
 
+.flex {
+    display: flex;
+}
+
 .wrapper {
     min-width: 85vw;
 }
@@ -49,3 +53,24 @@ body {
     object-fit: cover;
     width: 100% ;
 }
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meme-text {
+    color: azure;
+    font-size: 1.5rem;
+    font-family: serif;
+}
+
+.dot{
+    height: 26px;
+    aspect-ratio: 1;
+    border: 5px solid hsl(210, 66%, 44%);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color:hsl(210, 66%, 44%);
+}
+
