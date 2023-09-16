@@ -1,4 +1,17 @@
 /* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-blue-dark: 211, 100%, 12%;
+    --clr-blue-light: 210, 66%, 44%;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+
+}
+/* ------------------- */
 /* Reset               */
 /* ------------------- */
 
@@ -28,7 +41,7 @@ picture {
 }
 
 body {
-    background-color: hsl(211, 100%, 12%);
+    background-color: hsl(var(--clr-blue-dark));
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -38,11 +51,20 @@ body {
     display: flex;
 }
 
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
 .wrapper {
-    min-width: 85vw;
+    padding: clamp(1vw,1vw + 1rem,2rem);
 }
 
 .carousel-slider{
+    width: min(85vw,1543px);
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
@@ -59,18 +81,31 @@ body {
     justify-content: space-between;
 }
 
+.flow >*:where(:not(:last-child)){
+    margin-right: 0.4rem;
+}
+
 .meme-text {
     color: azure;
     font-size: 1.5rem;
     font-family: serif;
 }
 
+.dot-buttons >*{
+    cursor: pointer;
+}
+
 .dot{
     height: 26px;
     aspect-ratio: 1;
-    border: 5px solid hsl(210, 66%, 44%);
+    border: 5px solid hsl(var(--clr-blue-light));
     border-radius: 50%;
-    cursor: pointer;
-    background-color:hsl(210, 66%, 44%);
+    background-color:hsl(var(--clr-blue-light));
+}
+
+
+.active {
+    background-color: hsl(var(--clr-blue-dark));
+
 }
 
