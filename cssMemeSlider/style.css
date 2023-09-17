@@ -51,6 +51,11 @@ body {
     display: flex;
 }
 
+.text-left {
+    width: 50%;
+    margin-left: 0;
+}
+
 .mt-4 {
     margin-top: 2rem;
 }
@@ -103,9 +108,22 @@ body {
     background-color:hsl(var(--clr-blue-light));
 }
 
-
 .active {
     background-color: hsl(var(--clr-blue-dark));
 
 }
 
+@keyframes move-text {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+    
+}
+
+.text-translate {
+    animation: move-text;
+    animation-duration: 1000ms;
+}

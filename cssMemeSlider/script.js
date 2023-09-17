@@ -1,5 +1,5 @@
 const descriptions = ['one','two','three','four']
-const textDescription = document.querySelector('[data-meme-text]')
+const descriptionContainer = document.querySelector('[data-meme-text]')
 
 const carousel = document.getElementById('carousel')
 
@@ -22,7 +22,10 @@ dots.forEach((dot,index)=>{
         dots[activeIndex].classList.remove('active')
         dot.classList.add('active')
         activeIndex = index
-        textDescription.textContent = getDescription(index)
+        descriptionContainer.textContent = getDescription(index)
+        descriptionContainer.classList.add('text-translate')
+        window.setTimeout(()=>{descriptionContainer.classList.remove('text-translate')},1000)
+        
     }
     )
 })
