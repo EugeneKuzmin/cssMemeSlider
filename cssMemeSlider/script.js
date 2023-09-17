@@ -19,12 +19,12 @@ const getDescription = (index) => {
 dots.forEach((dot,index)=>{
     dot.addEventListener('click',()=>{
         carousel.scrollLeft = picWidth*index
-        dots[activeIndex].classList.remove('active')
-        dot.classList.add('active')
+        dots[activeIndex].querySelector('.dot-button').classList.remove('active')
+        dot.querySelector('.dot-button').classList.add('active')
         activeIndex = index
         descriptionContainer.textContent = getDescription(index)
         descriptionContainer.classList.add('text-translate')
-        window.setTimeout(()=>{descriptionContainer.classList.remove('text-translate')},1000)
+        window.setTimeout(()=>{descriptionContainer.classList.remove('text-translate')},800)
         
     }
     )

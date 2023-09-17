@@ -96,16 +96,23 @@ body {
     font-family: serif;
 }
 
-.dot-buttons >*{
+.dot:hover,
+.dot-button:hover{
     cursor: pointer;
 }
 
 .dot{
-    height: 26px;
+    height: 2.5rem;
     aspect-ratio: 1;
-    border: 5px solid hsl(var(--clr-blue-light));
-    border-radius: 50%;
+    padding: 0.4rem;
+}
+
+.dot-button {
+    width: 100%;
+    aspect-ratio: 1;
     background-color:hsl(var(--clr-blue-light));
+    border: 0.2rem solid hsl(var(--clr-blue-light));
+    border-radius: 50%;
 }
 
 .active {
@@ -115,15 +122,29 @@ body {
 
 @keyframes move-text {
     from {
-        transform: translateX(50%);
+        transform: translateX(80%);
+        opacity: 0;
     }
     to {
         transform: translateX(0);
+        opacity: 1;
     }
-    
 }
 
 .text-translate {
-    animation: move-text;
-    animation-duration: 1000ms;
+    animation: move-text 800ms ease-in-out;
+}
+
+
+@media (max-width:48rem){
+    .controls {
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+    .text-left {
+        margin-top: 1.5rem;
+        align-self: flex-start;
+    }
+
 }
