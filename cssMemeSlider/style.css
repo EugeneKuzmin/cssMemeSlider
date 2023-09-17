@@ -4,7 +4,7 @@
 
 :root {
     /* colors */
-    --clr-blue-dark: 211, 100%, 12%;
+    --clr-grey: 204, 6%, 15%;
     --clr-blue-light: 210, 66%, 44%;
     
     /* font-families */
@@ -41,7 +41,7 @@ picture {
 }
 
 body {
-    background-color: hsl(var(--clr-blue-dark));
+    background-color: hsl(var(--clr-grey));
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -66,16 +66,20 @@ body {
 
 .wrapper {
     padding: clamp(1vw,1vw + 1rem,2rem);
+    overflow: hidden;
 }
 
 .carousel-slider{
     width: min(85vw,1543px);
+    border-radius: 0.3rem;
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 
 .carousel-slider img{
+    scroll-snap-align: start;
     height: 501px;
     object-fit: cover;
     width: 100% ;
@@ -96,29 +100,31 @@ body {
     font-family: serif;
 }
 
-.dot:hover,
-.dot-button:hover{
-    cursor: pointer;
-}
-
 .dot{
-    height: 2.5rem;
+    height: 3rem;
     aspect-ratio: 1;
-    padding: 0.4rem;
+    padding: 0.5rem;
 }
 
-.dot-button {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color:hsl(var(--clr-blue-light));
-    border: 0.2rem solid hsl(var(--clr-blue-light));
+
+  input {
+
+    appearance: none;
     border-radius: 50%;
-}
+    width: 100%;
+    height: 100%;
+    border: 6px solid hsl(var(--clr-blue-light));
+    background-color: hsl(var(--clr-blue-light));
+  }
 
-.active {
-    background-color: hsl(var(--clr-blue-dark));
+  label:hover{
+    cursor: pointer;
+  }
 
-}
+  input:checked {
+    background-color: transparent;
+  }
+
 
 @keyframes move-text {
     from {

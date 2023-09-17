@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="carousel-slider " id="carousel">
-            <img src="./img/Photo1.png" class="card__img" alt="first meme">
-            <img src="./img/Photo2.png" class="card__img" alt="second meme">
-            <img src="./img/Photo3.png" class="card__img" alt="third meme">
-            <img src="./img/Photo4.png" class="card__img" alt="forth meme">
+        <div class="carousel-slider" id="carousel">
+            <img src="./img/Photo1.png" id="image1" alt="first meme">
+            <img src="./img/Photo2.png" id="image2" alt="second meme">
+            <img src="./img/Photo3.png" id="image3" alt="third meme">
+            <img src="./img/Photo4.png" id="image4" alt="forth meme">
         </div>
 
         <div class="controls mt-3">
-            <div class="meme-text text-left" data-meme-text>One</div>
+            <div class="meme-text text-left" data-meme-text>
+                One
+            </div>
             <div class="dot-buttons flex flow">
-                    <div class="dot"><button class="dot-button active"></button></div>
-                    <div class="dot"><button class="dot-button"></button></div>
-                    <div class="dot"><button class="dot-button"></button></div>
-                    <div class="dot"><button class="dot-button"></button></div>
-                </div>
+                
+                <label class="dot">
+                    <input type="checkbox" id="radio1" name="cntrls" value="radio1" >
+                </label>
+                <label class="dot">
+                    <input type="checkbox" id="radio2" name="cntrls" value="radio2" >
+                </label>
+                <label class="dot">
+                    <input type="checkbox" id="radio3" name="cntrls" value="radio3" >
+                </label>
+                <label class="dot">
+                    <input type="checkbox" id="radio4" name="cntrls" value="radio4" >
+                </label>
+                    
             </div>
         </div>
     </div>
