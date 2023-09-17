@@ -9,10 +9,10 @@
 <body>
     <div class="wrapper">
         <div class="carousel-slider" id="carousel">
-            <img src="./img/Photo1.png" id="image1" alt="first meme">
-            <img src="./img/Photo2.png" id="image2" alt="second meme">
-            <img src="./img/Photo3.png" id="image3" alt="third meme">
-            <img src="./img/Photo4.png" id="image4" alt="forth meme">
+            <img src="./img/photo1.jpg" id="image1" alt="first meme">
+            <img src="./img/photo2.jpeg" id="image2" alt="second meme">
+            <img src="./img/photo3.jpg" id="image3" alt="third meme">
+            <img src="./img/photo4.jpg" id="image4" alt="forth meme">
         </div>
 
         <div class="controls mt-3">
@@ -22,16 +22,16 @@
             <div class="dot-buttons flex flow">
                 
                 <label class="dot">
-                    <input type="checkbox" id="radio1" name="cntrls" value="radio1" >
+                    <input type="radio" id="radio1" name="cntrls" onclick="window.location='#image1'" value="radio1" checked>
                 </label>
                 <label class="dot">
-                    <input type="checkbox" id="radio2" name="cntrls" value="radio2" >
+                    <input type="radio" id="radio2" onclick="window.location='#image2'" name="cntrls" value="radio2" >
                 </label>
                 <label class="dot">
-                    <input type="checkbox" id="radio3" name="cntrls" value="radio3" >
+                    <input type="radio" id="radio3"  onclick="window.location='#image3'" name="cntrls" value="radio3" >
                 </label>
                 <label class="dot">
-                    <input type="checkbox" id="radio4" name="cntrls" value="radio4" >
+                    <input type="radio" id="radio4" onclick="window.location='#image4'" name="cntrls" value="radio4" >
                 </label>
                     
             </div>

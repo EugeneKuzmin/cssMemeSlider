@@ -70,7 +70,7 @@ body {
 }
 
 .carousel-slider{
-    width: min(85vw,1543px);
+    width: min(85vw,45rem);
     border-radius: 0.3rem;
     display: flex;
     overflow-x: hidden;
@@ -80,7 +80,7 @@ body {
 
 .carousel-slider img{
     scroll-snap-align: start;
-    height: 501px;
+    height: 31rem;
     object-fit: cover;
     width: 100% ;
 }
@@ -107,7 +107,7 @@ body {
 }
 
 
-  input {
+  input[type="radio"] {
 
     appearance: none;
     border-radius: 50%;
@@ -121,7 +121,7 @@ body {
     cursor: pointer;
   }
 
-  input:checked {
+  input[type="radio"]:checked {
     background-color: transparent;
   }
 
